@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kalam&family=Permanent+Marker&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: blue;
+    background-color: rgb(255, 194, 80);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    animation: text-shadow-pop-tr 0.6s both;
+    padding: 20px;
+}
+h2{
+    font-size: 25px;
+    padding:15px;
+    text-shadow: 0 0 2px lightskyblue, 0 0 8px white;
+}
+p {
+    padding: 0 20px;
+}
+.pistas, .consejos {
+    font-family: 'Kalam', cursive;
+}
+.pista, .consejo{
+    font-size: 20px;
+}
+.subTit1{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0;
+}
+.pista-1{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0;
+}
+.pista-2{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.2s;
+}
+.subTit2{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0;
+}
+.consejo-1{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.4s;
+}
+.consejo-2{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.6s;
+}
+.p1{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+.pista-1:hover .p1{
+    visibility: visible;
+    opacity: 1;
+}
+.p2{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+.pista-2:hover .p2{
+    visibility: visible;
+    opacity: 1;
+}
+.p3{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+.consejo-1:hover .p3{
+    visibility: visible;
+    opacity: 1;
+}
+.p4{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+.consejo-2:hover .p4{
+    visibility: visible;
+    opacity: 1;
+}
+.img-sz{
+    max-width: 60px;
+}
+.imagenTai{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.8s;
+}
+@keyframes text-shadow-pop-tr {
+    0% {
+    text-shadow: 0 0 #3372d1, 0 0 #437cd1, 0 0 #618bca, 0 0 #7c9ac7, 0 0 #94a8c5, 0 0 #a4b1c4, 0 0 #b1b7c0, 0 0 #bdbec0;
+    transform: translateX(0) translateY(0);
+    }
+    100% {
+    text-shadow: 1px -1px #3372d1, 2px -2px #437cd1, 3px -3px #618bca, 4px -4px #7c9ac7, 5px -5px #94a8c5, 6px -6px #a4b1c4, 7px -7px #b1b7c0, 8px -8px #bdbec0;
+    transform: translateX(-8px) translateY(8px);
+    }
+}
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media (min-width: 768px) {
+    h1{
+        font-size: 45px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    p{
+        font-size: 30px;
+    }
+    .img-sz{
+        max-width: 100px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+    .pistas, .consejos{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    .pista, .consejo{
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        text-align: justify;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
